@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="png/user.png">
+            <img src="../png/user.png">
         </div>
         <div class="col-9 pt-5">
             <div><h1>ExampleUserName</h1></dv>
@@ -13,9 +13,9 @@
                 <div class="pr-4"><strong>119</strong> folowers</div>
                 <div class="pr-4"><strong>212</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">Lorem ipsum</div>
-            <div>Nunc libero felis, vehicula in metus quis, eleifend semper nibh. Nullam aliquet quis erat in auctor.</div>
-            <div><a href="#">github.com/mankojanos</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
             </div>
         </div>
     </div>
