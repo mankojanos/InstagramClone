@@ -7,7 +7,10 @@
             <img src="../png/user.png">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>ExampleUserName</h1></dv>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add new post</a>
+            </div>
             <div class="d-flex">
                 <div class="pr-4"><strong>51</strong> posts</div>
                 <div class="pr-4"><strong>119</strong> folowers</div>
