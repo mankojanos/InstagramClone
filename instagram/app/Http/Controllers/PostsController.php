@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
 {
@@ -26,6 +27,11 @@ class PostsController extends Controller
 
         $imagePath = request('image')->store('uploads', 'public'); //save local storage
 
+        /*
+        TODO: GD library fix
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $image->save(); */
+
        auth()->user()->posts()->create([
            'caption' => $data['caption'],
            'image' => $imagePath
@@ -33,7 +39,10 @@ class PostsController extends Controller
 
        return redirect('profile/' . auth()->user()->id);
 
+    }
 
-        dd(request()->all());
+    public function show(\App\Models\Post $post)
+    {
+        return view('posts.show', compact('post'));
     }
 }
