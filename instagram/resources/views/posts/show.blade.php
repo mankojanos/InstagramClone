@@ -17,14 +17,20 @@
                             <a href="/profile/{{ $post->user->id }}">
                                 <span class="text-dark">{{ $post->user->username }}</span>
                             </a>
+                            <a href="#" class="pl-3">Follow</a>
                         </div>
                     </div>
                 </div>
                 
                 <hr>
 
-                <span class="font-weight-bold"><a href="/profile/{{ $post->user->id }}"><span class="text-dark">{{ $post->user->username }}</span></a></span>
-                <p>{{ $post->caption }}</p>
+                <p>
+                    <span class="font-weight-bold">
+                        <a href="/profile/{{ $post->user->id }}">
+                            <span class="text-dark">{{ $post->user->username }}</span>
+                        </a>
+                    </span>{{ $post->caption }}
+                </p>
                 
             </div>
         </div>
