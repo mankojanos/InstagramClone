@@ -37,10 +37,8 @@ class PostsController extends Controller
 
         $imagePath = request('image')->store('uploads', 'public'); //save local storage
 
-        /*
-        TODO: GD library fix
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
-        $image->save(); */
+        $image->save();
 
        auth()->user()->posts()->create([
            'caption' => $data['caption'],

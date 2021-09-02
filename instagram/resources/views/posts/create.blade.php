@@ -3,9 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <form action="/p/profile/{{ $user->id }}" enctype="multipart/form-data" method="POST">
+        <form action="/p" enctype="multipart/form-data" method="POST">
             @csrf
-            @method('PATCH')
             
             <div class="row">
                 <h2>Add new post</h2>
