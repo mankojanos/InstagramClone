@@ -24,15 +24,15 @@
             @endcan
 
             <div class="d-flex">
-                <div class="pr-4"><strong>{{ $user->posts->count() }}</strong> posts</div>
-                <div class="pr-4"><strong>{{ $user->profile->followers->count() }}</strong> folowers</div>
-                <div class="pr-4"><strong>{{ $user->following->count() }}</strong> following</div>
+                <div class="pr-4"><strong>{{ $postCount }}</strong> posts</div>
+                <div class="pr-4"><strong>{{ $followerCount }}</strong> folowers</div>
+                <div class="pr-4"><strong>{{ $followingCount }}</strong> following</div>
             </div>
             
                
-            {{-- <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->description }}</div>
-            <div><a href="#">{{ $user->profile->url }}</a></div> --}}
+            <div><a href="#">{{ $user->profile->url }}</a></div>
             
 
             </div> 
@@ -47,9 +47,8 @@
                 <img src="/storage/{{ $post->image }}" class="w-100">
             </a>
         </div>
-
-        @endforeach
     </div>
+    @endforeach
 
 </div>
 @endsection
