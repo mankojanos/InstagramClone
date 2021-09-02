@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    @@foreach ($posts as $post)
+    @foreach ($posts as $post)
     <div class="row">
         <div class="col-6 offset-3">            
             <a href="/profile/ {{ $post-yuser->id }}">
@@ -22,8 +22,7 @@
                         <span class="text-dark">{{ $post->user->username }}</span>
                     </a>
                 </span>{{ $post->caption }}
-            </p>
-                
+            </p>               
             </div>
         </div>
     </div>
